@@ -114,28 +114,17 @@ def summary_data(employees):
 	print("Average Salary : %d" % np.mean([int(employee.salary) for employee in employees if employee.position == "Manager"]))
 
 def write_data(init, current, filename):
-	#pas encore ajouté dans le fichier
+	#not added yet
 	set1 = set(i.id for i in init)
 	diff1 = [i for i in current if (i.id) not in set1]
 
-	#pas encore supprimé
+	#not deleted yet
 	set2 = set(c.id for c in current)
 	diff2 = [c for c in init if c.id not in set2]
 
 	with open(filename, "r+") as f:
 		for d in diff1:
-			f.write("%s#%s#%s#%s" % (d.id, d.name, d.position, d.salary))
-	""" with open(filename, "r+") as f:
-		lines = f.readlines()
-		for c in current :
-			for i in init :
-				if c.id != i.id:
-					f.write("%s#%s#%s#%s" % (c.id, c.name, c.position, c.salary))
-					break
-				else :
-					for line in lines :
-						if line[0:5] != c.id :
-							f.write(line) """
+			f.write("%s#%s#%s#%s\n" % (d.id, d.name, d.position, d.salary))
 	print("Exiting")
 	exit()
 
