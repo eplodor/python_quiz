@@ -1,0 +1,13 @@
+a. The spell class is parent of both Accio and Confundo subclasses
+
+b. The code is weirdly indented on the pdf. If study_spell is a function but not a method, the output is :
+"Accio
+Summoning Charm Accio
+This charm summons an object to the caster, potentially over a significant distance
+Confundus Charm Confundo
+Causes the victim to become confused and befuddled"
+Otherwise, it prints an error, since study_spell is unknown
+
+c. It is the method from the Confundo class which gets called
+
+d. The get_description method needs to be added to override its parent's version. The code is provided in spell.py
